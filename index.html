@@ -957,26 +957,27 @@
                 });
             }
 
-  $(function(){
-       // высота "шапки", px
-       var h_hght = $('#header').outerHeight();
-       // высота блока с меню, px
-       var h_nav = $('#menu').outerHeight();
-       var top;
-       $(window).scroll(function(){
-           // отступ сверху
-           top = $(this).scrollTop();
-           if((h_hght-top) <= h_nav){
-               $('#menu').css('top','0');
-           }
-           else if(top < h_hght && top > 0){
-               $('#menu').css({'bottom' : top, 'top':''});
-           }
-           else if(top < h_nav){
-               $('#menu').css({'top':''});
-           }
-       });
-   });     
+$(function(){ 
+    var elem = $('#menu');
+    var h_hght = $('#header').outerHeight(); // высота шапки
+    var h_mrg = 0;    // отступ когда шапка уже не видна
+    var top = $(this).scrollTop();
+     
+    if(top > h_hght){
+        elem.css('top', h_mrg);
+    }           
+     
+    $(window).scroll(function(){
+        top = $(this).scrollTop();
+         
+        if (top+h_mrg < h_hght) {
+            elem.css('top', (h_hght-top));
+        } else {
+            elem.css('top', h_mrg);
+        }
+    });
+ 
+});   
 
         </script>
 
