@@ -10,7 +10,7 @@
 
 <body>
 	<div class="wrap">
-		<header class="clearfix">
+		<header id="header" class="clearfix">
 			<div class="header-container clearfix">
 			<div class="header-container-transparent">
 			</div>
@@ -18,6 +18,7 @@
 					<h1>
 						Mon Ja Cai
 					</h1>
+					<img class="avatar" src="img/layer-31.png">
 					<h3>
 						User interface designer
 					</h3>
@@ -89,7 +90,7 @@
 				</div>
 			</div>
 		</header>
-		<nav class="menu">
+		<nav id="menu" class="menu">
 			<a class="menu__item" href="">
 				Home
 			</a>
@@ -113,6 +114,16 @@
 			</a>
 			<a class="menu__item" href="">
 				Pages
+			</a>
+			<a class="menu__item menu__icon" href="">
+				<div class="menu_icon__bar-wrap">
+				<div class="menu-icon__bar">
+				</div>
+				<div class="menu-icon__bar">
+				</div>
+				<div class="menu-icon__bar">
+				</div>
+				</div>
 			</a>
 		</nav>
 	<section class="about-me-section section">
@@ -150,39 +161,57 @@
 				What I do?
 			</h3>
 			<ul class="skills-list">
-				<li class="skills-list-item__border">
-					<div class="skills-list__item ui_design">
-						<img class= "skills-list-item__icon" src="img/ui_design_icon.png">
-						<span class="skills-list-item__name">
-							UI design
-						</span>
+				<li class="skills-list-item__wrap">
+					<div class="skills-list-item__border">
+						<div class="skills-list__item ui_design">
+							<img class= "skills-list-item__icon" src="img/ui_design_icon.png">
+							<span class="skills-list-item__name">
+								UI design
+							</span>
+						</div>
 					</div>
 				</li>
-				<li class="skills-list-item__border">
-					<div class="skills-list__item">
-						<img class= "skills-list-item__icon" src="img/graphic_design_icon.png">
-						<span class="skills-list-item__name">
-							Graphic design
-						</span>
+				<li class="skills-list-item__wrap">
+					<div class="skills-list-item__border">
+						<div class="skills-list__item">
+							<img class= "skills-list-item__icon" src="img/graphic_design_icon.png">
+							<span class="skills-list-item__name">
+								Graphic design
+							</span>
+						</div>
 					</div>
 				</li>
-				<li class="skills-list-item__border">
-					<div class="skills-list__item">
-						<img class= "skills-list-item__icon" src="img/branding_icon.png">
-						<span class="skills-list-item__name">
-							Branding design
-						</span>
+				<li class="skills-list-item__wrap">
+					<div class="skills-list-item__border">
+						<div class="skills-list__item">
+							<img class= "skills-list-item__icon" src="img/branding_icon.png">
+							<span class="skills-list-item__name">
+								Branding design
+							</span>
+						</div>
 					</div>
 				</li>
-				<li class="skills-list-item__border">
-					<div class="skills-list__item">
-						<img class= "skills-list-item__icon" src="img/web_design_icon.png">
-						<span class="skills-list-item__name">
-							Web design
-						</span>
+				<li class="skills-list-item__wrap">
+					<div class="skills-list-item__border">
+						<div class="skills-list__item">
+							<img class= "skills-list-item__icon" src="img/web_design_icon.png">
+							<span class="skills-list-item__name">
+								Web design
+							</span>
+						</div>
 					</div>
 				</li>
 			</ul>
+			<nav class="skills-section-navigation section-navigation">
+				<a class="section-navigation__circle" href="">				
+				</a>
+				<a class="section-navigation__circle" href="">				
+				</a>
+				<a class="section-navigation__circle" href="">				
+				</a>
+				<a class="section-navigation__circle" href="">				
+				</a>
+			</nav>
 		</div>
 	</section>
 	<section class="resume-section section">
@@ -280,26 +309,6 @@
 					Experience
 				</h3>
 				<ul class="timeline-list">
-					<li class="timeline-list__item_left timeline-list__item clearfix">
-						<div class="timeline-list-item_left__block">
-								<h4 class="timeline-list-item__title">
-									Secondary school certificate
-								</h4>
-								<span class="timeline-list-item__subtitle">
-									Salimganj A R school, Dhaka, BD
-								</span>
-								<p class="timeline-list-item__description">
-									I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.
-								</p>
-						</div>
-						<div class="timeline-list-item-left__date-and-line-block">
-							<span class="timeline-list-item_date">
-								2004 - 2010
-							</span>
-							<div class="timeline-list-item__line">
-							</div>
-						</div>
-					</li>
 					<li class="timeline-list__item_right timeline-list__item clearfix">
 						<div class="timeline-list-item_right__block">
 								<h4 class="timeline-list-item__title">
@@ -319,7 +328,27 @@
 							<div class="timeline-list-item__line">
 							</div>
 						</div>
-					</li>		
+					</li>	
+					<li class="timeline-list__item_left timeline-list__item clearfix">
+						<div class="timeline-list-item_left__block">
+								<h4 class="timeline-list-item__title">
+									Secondary school certificate
+								</h4>
+								<span class="timeline-list-item__subtitle">
+									Salimganj A R school, Dhaka, BD
+								</span>
+								<p class="timeline-list-item__description">
+									I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.
+								</p>
+						</div>
+						<div class="timeline-list-item-left__date-and-line-block">
+							<span class="timeline-list-item_date">
+								2004 - 2010
+							</span>
+							<div class="timeline-list-item__line">
+							</div>
+						</div>
+					</li>	
 				</ul>
 			</div>
 	</section>
@@ -549,12 +578,19 @@
 					<img src="img/works-section/work8.png">
 				</li>
 			</ul>
+			<nav class="works-section-navigation section-navigation">
+				<a class="section-navigation__circle" href="">				
+				</a>
+				<a class="section-navigation__circle" href="">				
+				</a>
+				<a class="section-navigation__circle" href="">				
+				</a>
+				<a class="section-navigation__circle" href="">				
+				</a>
+			</nav>
 		</div>
 	</section>
 	<section class="experience-section section">
-		<div class="experience-section-transparent">
-			
-		</div>
 		<div class="experience-container container">
 			<div class="experience__item">
 				<p class="experience__icon">
@@ -785,9 +821,6 @@
 		</div>
 	</section>
 	<section class="hire-section section">
-		<div class="hire-section-transparent">
-			
-		</div>
 		<p class="tag-line">
 			I'm available for freelance proect
 		</p>
@@ -887,7 +920,9 @@
 						</div>
 					</div>
 					<div class="contacts-map">
-						
+						<div id="map" >
+							
+						</div>
 					</div>
 				</div>
 			</div>
@@ -901,5 +936,48 @@
 		</div>
 	</footer>
 	</div>
+	    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+        
+        <script type="text/javascript">
+            google.maps.event.addDomListener(window, 'load', init);
+        
+            function init() {
+                var mapOptions = {
+                    zoom: 15,
+                    center: new google.maps.LatLng(23.780973, 90.405637),
+                    styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"administrative.country","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"lightness":"30"}]},{"featureType":"administrative.country","elementType":"labels.text","stylers":[{"lightness":"30"}]},{"featureType":"administrative.province","elementType":"labels.text","stylers":[{"lightness":"30"},{"visibility":"simplified"}]},{"featureType":"administrative.locality","elementType":"labels.text","stylers":[{"visibility":"on"},{"lightness":"30"},{"saturation":"-100"}]},{"featureType":"administrative.neighborhood","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"administrative.neighborhood","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#a1dcd9"},{"visibility":"on"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels.text","stylers":[{"visibility":"off"}]}]
+                };
+                var mapElement = document.getElementById('map');
+                var map = new google.maps.Map(mapElement, mapOptions);
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(23.780973, 90.405637),
+                    map: map,
+                    title: 'Snazzy!'
+                });
+            }
+
+  $(function(){
+       // высота "шапки", px
+       var h_hght = $('#header').outerHeight();
+       // высота блока с меню, px
+       var h_nav = $('#menu').outerHeight();
+       var top;
+       $(window).scroll(function(){
+           // отступ сверху
+           top = $(this).scrollTop();
+           if((h_hght-top) <= h_nav){
+               $('#menu').css('top','0');
+           }
+           else if(top < h_hght && top > 0){
+               $('#menu').css({'bottom' : top, 'top':''});
+           }
+           else if(top < h_nav){
+               $('#menu').css({'top':'','bottom':'0'});
+           }
+       });
+   });     
+
+        </script>
+
 </body>
 </html>
