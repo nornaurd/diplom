@@ -2,10 +2,14 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>Abs Voch Resume</title>
 	<link rel="stylesheet" type="text/css" href="reset.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+
+<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 	<script src="https://use.fontawesome.com/14061f4038.js"></script>
 </head>
 
@@ -203,7 +207,7 @@
 					</div>
 				</li>
 			</ul>
-			<nav class="skills-section-navigation section-navigation">
+<!-- 			<nav class="skills-section-navigation section-navigation">
 				<a class="section-navigation__circle" href="">				
 				</a>
 				<a class="section-navigation__circle" href="">				
@@ -212,7 +216,7 @@
 				</a>
 				<a class="section-navigation__circle" href="">				
 				</a>
-			</nav>
+			</nav> -->
 		</div>
 	</section>
 	<section class="resume-section section">
@@ -553,7 +557,7 @@
 					Identity
 				</a>
 			</nav>
-			<ul class="works-section-gallery">
+			<ul class="works_section_gallery">
 				<li class="works-section-gallery__item">
 					<img src="img/works-section/work1.png">
 				</li>
@@ -579,7 +583,7 @@
 					<img src="img/works-section/work8.png">
 				</li>
 			</ul>
-			<nav class="works-section-navigation section-navigation">
+<!-- 			<nav class="works-section-navigation section-navigation">
 				<a class="section-navigation__circle" href="">				
 				</a>
 				<a class="section-navigation__circle" href="">				
@@ -588,7 +592,7 @@
 				</a>
 				<a class="section-navigation__circle" href="">				
 				</a>
-			</nav>
+			</nav> -->
 		</div>
 	</section>
 	<section class="experience-section section">
@@ -938,7 +942,7 @@
 	</footer>
 	</div>
 	    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-	    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         
         <script type="text/javascript">
             google.maps.event.addDomListener(window, 'load', init);
@@ -978,9 +982,36 @@
 //         }
 //     });
  
-// });   
+// });  
+
 
         </script>
 
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script type="text/javascript">
+$('.works_section_gallery').slick({
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  responsive: true,
+  rows: 2
+});
+
+var filtered = false;
+
+$('.js-filter').on('click', function(){
+  if (filtered === false) {
+    $('.filtering').slick('slickFilter',':even');
+    $(this).text('Unfilter Slides');
+    filtered = true;
+  } else {
+    $('.filtering').slick('slickUnfilter');
+    $(this).text('Filter Slides');
+    filtered = false;
+  }
+});
+</script>
 </body>
 </html>
