@@ -1530,6 +1530,7 @@ h1 {
 }
 
 .form-label {
+	-webkit-appearance: none;
 	font: 300 12px 'Roboto';
 	color: #282828;
 	display: block;
@@ -1537,6 +1538,7 @@ h1 {
 }
 
 .form-input {
+	-webkit-appearance: none;
 	background-color: #f7f7f7;
 	border: 1px solid #eee;
 	width: 100%;
@@ -1549,6 +1551,7 @@ h1 {
 }
 
 .form-textarea {
+	-webkit-appearance: none;
 	width: 100%;
 	background-color: #f7f7f7;
 	border: 1px solid #eee;
@@ -1572,6 +1575,7 @@ h1 {
 }
 
 .send_button {
+	-webkit-appearance: none;
 	display: block;
 	background-color: #68c3a3;
 	font: 500 14px 'Roboto';
