@@ -542,46 +542,62 @@
 				</div>
 			</div>
 			<nav class="works-section-menu">
-				<a class="works-section-menu__item" href="">
+				<div class="works-section-menu__item js-filter-btn js-all-button is-active">
 					All
-				</a>
-				<a class="works-section-menu__item" href="">
+				</div>
+				<div class="works-section-menu__item js-filter-btn js-design-button">
 					Design
-				</a>
-				<a class="works-section-menu__item" href="">
+				</div>
+				<div class="works-section-menu__item js-filter-btn js-web-button">
 					Web
-				</a>
-				<a class="works-section-menu__item" href="">
+				</div>
+				<div class="works-section-menu__item js-filter-btn js-interface-button">
 					Interface
-				</a>
-				<a class="works-section-menu__item" href="">
+				</div>
+				<div class="works-section-menu__item js-filter-btn js-identity-button">
 					Identity
-				</a>
+				</div>
 			</nav>
-			<ul class="works_section_gallery">
-				<li class="works-section-gallery__item">
-					<img src="img/works-section/work1.png">
+			<ul class="works_section_gallery filtering">
+				<li class="works-section-gallery__item js-all js-design js-identity">
+					<figure>
+						<img src="img/works-section/work1.png">
+					</figure>
 				</li>
-				<li class="works-section-gallery__item">
+				<li class="works-section-gallery__item js-all js-design js-identity">
+					<figure>
 					<img src="img/works-section/work2.png">
+					</figure>
 				</li>
-				<li class="works-section-gallery__item">
+				<li class="works-section-gallery__item js-all js-design  js-web js-interface">
+					<figure>
 					<img src="img/works-section/work3.png">
+					</figure>
 				</li>
-				<li class="works-section-gallery__item">
+				<li class="works-section-gallery__item js-all js-design ">
+					<figure>
 					<img src="img/works-section/work4.png">
+					</figure>
 				</li>
-				<li class="works-section-gallery__item">
+				<li class="works-section-gallery__item js-all js-design  js-identity">
+					<figure>
 					<img src="img/works-section/work5.png">
+					</figure>
 				</li>
-				<li class="works-section-gallery__item">
+				<li class="works-section-gallery__item js-all js-design  js-web js-interface">
+					<figure>
 					<img src="img/works-section/work6.png">
+					</figure>
 				</li>
-				<li class="works-section-gallery__item">
+				<li class="works-section-gallery__item js-all js-design  js-identity">
+					<figure>
 					<img src="img/works-section/work7.png">
+					</figure>
 				</li>
-				<li class="works-section-gallery__item">
+				<li class="works-section-gallery__item js-all js-design  js-identity">
+					<figure>
 					<img src="img/works-section/work8.png">
+					</figure>
 				</li>
 			</ul>
 <!-- 			<nav class="works-section-navigation section-navigation">
@@ -893,7 +909,7 @@
 						<textarea class="form-textarea" name="Subject"></textarea>
 					</p>
 					<p class="form-row">
-					<input class="send_button" type="submit" name="Send" value="Send message">
+					<button class="send_button" type="input">Send message</button>
 					</p>
 				</div>
 				<div class="form-and-contacts_column column2">
@@ -989,30 +1005,81 @@
         </script>
 
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script type="text/javascript" src="slick/slick.min.js"></script>
 <script type="text/javascript">
-$('.works_section_gallery').slick({
-  slidesToShow: 4,
-  slidesToScroll: 4,
-  responsive: true,
-  rows: 2
-});
 
-var filtered = false;
+	$('.filtering').slick({
+	  slidesToShow: 4,
+	  slidesToScroll: 4,
+	  infinite: false,
+	  dots: true,
+	  responsive: [
+	    {
+	      breakpoint: 1024,
+	      settings: {
+	        slidesToShow: 3,
+	        slidesToScroll: 3,
+	        infinite: true,
+	        dots: true
+	      }
+	    },
+	    {
+	      breakpoint: 600,
+	      settings: {
+	        slidesToShow: 2,
+	        slidesToScroll: 2
+	      }
+	    },
+	    {
+	      breakpoint: 480,
+	      settings: {
+	        slidesToShow: 1,
+	        slidesToScroll: 1
+	      }
+	    }
+	    // You can unslick at a given breakpoint now by adding:
+	    // settings: "unslick"
+	    // instead of a settings object
+	  ]
+	});
 
-$('.js-filter').on('click', function(){
-  if (filtered === false) {
-    $('.filtering').slick('slickFilter',':even');
-    $(this).text('Unfilter Slides');
-    filtered = true;
-  } else {
-    $('.filtering').slick('slickUnfilter');
-    $(this).text('Filter Slides');
-    filtered = false;
-  }
-});
+	var filtered = false;
+
+	$('.js-filter-btn').on('click', function() {
+		$('.js-filter-btn').removeClass('is-active');
+		$(this).addClass('is-active');
+	});
+
+	$('.js-web-button').on('click', function(){
+		$('.filtering').slick('slickUnfilter');
+	    $('.filtering').slick('slickFilter','.js-web');
+	});
+
+	$('.js-all-button').on('click', function(){
+		$('.filtering').slick('slickUnfilter');
+	    $('.filtering').slick('slickFilter','.js-all');
+	});
+
+	$('.js-design-button').on('click', function(){
+		$('.filtering').slick('slickUnfilter');
+	    $('.filtering').slick('slickFilter','.js-design');
+	});
+
+	$('.js-interface-button').on('click', function(){
+		$('.filtering').slick('slickUnfilter');
+	    $('.filtering').slick('slickFilter','.js-interface');
+
+	});
+
+	$('.js-identity-button').on('click', function(){
+	    $('.filtering').slick('slickUnfilter');
+	    $('.filtering').slick('slickFilter','.js-identity');
+	});
+
+
+
+	
 </script>
 </body>
 </html>
