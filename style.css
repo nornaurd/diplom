@@ -1266,6 +1266,7 @@ h1 {
 	font: 300 16px 'Roboto';
 	color: #fff;
 	text-align: justify;
+	margin: 0 -30px;
 }
 
 .circular-charts:before{
@@ -1288,12 +1289,24 @@ h1 {
 	display: inline-block;
 	text-align-last: center;
 	text-align:center;
-	width: 13%;
+	width: 150px;
 }
 
 .circle-label {
 	font: 300 16px 'Roboto';
 	color: #fff;
+}
+
+.circular-charts-wrap {
+	display: inline-block;
+	text-align-last: center;
+	text-align:center;
+}
+
+@media screen and (max-width: 1000px) {
+	.circular-charts-wrap {
+		width: 33%;
+	}
 }
 
 /* .circular-charts {
