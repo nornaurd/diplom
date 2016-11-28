@@ -1148,7 +1148,7 @@
 	</footer>
 	</div>
 	    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAp9RUx-jKrI2b9QoCOSb4mcJKnTDUYPrg"></script>
-	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         
         <script type="text/javascript">
             google.maps.event.addDomListener(window, 'load', init);
@@ -1192,9 +1192,7 @@
 
 
         </script>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        
 <script type="text/javascript" src="slick/slick.min.js"></script>
 <script type="text/javascript">
 
@@ -1332,13 +1330,13 @@ newsOnResize();
     time: 1000
 });
 </script>
-<script src="jquery.circliful.min.js"></script>
-<script src="ScrollMagic.min.js"></script>
 <script>
     // init controller
     var controller = new ScrollMagic.Controller();
-	var scene = new ScrollMagic.Scene({triggerElement: ".circular-charts"})
-    .on("enser", function () {
+</script>
+<script src="jquery.circliful.min.js"></script>
+<script>
+$( document ).ready(function() {
         $("#test-circle-leadership").circliful({
             animation: 1,
             animationStep: 5,
@@ -1429,11 +1427,9 @@ newsOnResize();
             backgroundColor: '#2f3439',
             fontColor: '#fff'
         });
-    })
-    .addTo(controller);
+    });
 </script>
- 
-
+<script src="ScrollMagic.min.js"></script>
 
 </body>
 </html>

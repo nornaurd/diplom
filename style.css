@@ -1270,6 +1270,7 @@ h1 {
 	font: 300 16px 'Roboto';
 	color: #fff;
 	text-align: justify;
+	margin: 0 -31px;
 }
 
 .circular-charts:before{
@@ -1293,6 +1294,7 @@ h1 {
 	text-align-last: center;
 	text-align:center;
 	width: 150px;
+	box-sizing: border-box;
 }
 
 .circle-label {
@@ -1305,14 +1307,15 @@ h1 {
 	text-align-last: center;
 	text-align: center;
 	width: 16%;
-	margin: 0 -31px;
+	box-sizing: border-box;
+	padding: 0;
+/* 	margin: 0 -31px; */
 }
 
-@media screen and (max-width: 799px) {
-.circular-charts-wrap {
-	width: 33%;
-	margin: 0;
-}
+@media screen and (max-width: 1000px) {
+	.circular-charts-wrap {
+		width: 30%;
+	}
 }
 
 /* .circular-charts {
