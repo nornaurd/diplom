@@ -1534,10 +1534,15 @@ h1 {
 	border: 1px solid #eee;
 	border-bottom: 3px double #eee;
 	margin: 0 0.7%;
+	margin-bottom: 20px;
+}
+
+.latest_posts__item:nth-of-type(n+4) {
+	display: none;
 }
 
 @media screen and (max-width: 900px) {
-	.latest_posts__item:nth-child(3) {
+	.latest_posts__item:nth-of-type(n+3) {
 		display: none;
 	}
 	.latest_posts__item {
@@ -1546,7 +1551,7 @@ h1 {
 }
 
 @media screen and (max-width: 620px) {
-	.latest_posts__item:nth-child(2) {
+	.latest_posts__item:nth-of-type(n+2) {
 		display: none;
 	}
 
@@ -1591,6 +1596,10 @@ h1 {
 
 .latest_posts__item img {
 	width: 100%;
+}
+
+.js-display {
+	display: inline-block !important;
 }
 
 .post_content_wrap {
@@ -1716,7 +1725,7 @@ h1 {
 @media screen and (max-width: 600px) {
 	.tag-line {
 		font-size: 26px;
-		line-height: 38px;
+		line-height: 48px;
 	}
 }
 
