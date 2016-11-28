@@ -10,7 +10,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 
-<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+	<link href="jquery.circliful.css" rel="stylesheet" type="text/css" />
 	<script src="https://use.fontawesome.com/14061f4038.js"></script>
 </head>
 
@@ -123,12 +124,12 @@
 			</a>
 			<a class="menu__item menu__icon" href="">
 				<div class="menu_icon__bar-wrap">
-				<div class="menu-icon__bar">
+				&#9776
 				</div>
-				<div class="menu-icon__bar">
-				</div>
-				<div class="menu-icon__bar">
-				</div>
+			</a>
+			<a class="menu__item menu__cross" href="">
+				<div class="menu_icon__bar-wrap">
+				&#735
 				</div>
 			</a>
 		</nav>
@@ -461,59 +462,85 @@
 					</li>
 				</ul>
 			</div>
-			<h3 class="section__title3_dark">
+			<h3 class="section__title3_dark more_skills_title">
 				More skills
 			</h3>
 			<div class="circular-charts">
 				<div class="circular-charts__item">
-					<div class="progress-radial progress-80">
-						<div class="overlay">80%</div>
-					</div>
-					<span class="circular-charts__title">
-						Leadership
-					</span>
+					<div id="test-circle-leadership"></div>
+					<div class="circle-label">Leadership</div>
 				</div>
 				<div class="circular-charts__item">
-					<div class="progress-radial progress-80">
-						<div class="overlay">80%</div>
-					</div>
-					<span class="circular-charts__title">
-						Leadership
-					</span>
+					<div id="test-circle-charisma"></div>
+					<div class="circle-label">Charisma</div>
 				</div>
 				<div class="circular-charts__item">
-					<div class="progress-radial progress-80">
-						<div class="overlay">80%</div>
-					</div>
-					<span class="circular-charts__title">
-						Leadership
-					</span>
+					<div id="test-circle-diligence"></div>
+					<div class="circle-label">Diligence</div>
 				</div>
 				<div class="circular-charts__item">
-					<div class="progress-radial progress-80">
-						<div class="overlay">80%</div>
-					</div>
-					<span class="circular-charts__title">
-						Leadership
-					</span>
+					<div id="test-circle-cheerfulness"></div>
+					<div class="circle-label">Сheerfulness</div>
 				</div>
 				<div class="circular-charts__item">
-					<div class="progress-radial progress-80">
-						<div class="overlay">80%</div>
-					</div>
-					<span class="circular-charts__title">
-						Leadership
-					</span>
+					<div id="test-circle-creativity"></div>
+					<div class="circle-label">Creativity</div>
 				</div>
 				<div class="circular-charts__item">
-					<div class="progress-radial progress-80">
-						<div class="overlay">80%</div>
-					</div>
-					<span class="circular-charts__title">
-						Leadership
-					</span>
+					<div id="test-circle-ironman"></div>
+					<div class="circle-label">Iron Man</div>
 				</div>
 			</div>
+<!-- 			<div class="circular-charts">
+				<div class="circular-charts__item">
+					<div class="progress-radial progress-80">
+						<div class="overlay"><span class="counter">80</span>%</div>
+					</div>
+					<span class="circular-charts__title">
+						Leadership
+					</span>
+				</div>
+				<div class="circular-charts__item">
+					<div class="progress-radial progress-80">
+						<div class="overlay"><span class="counter">80</span>%</div>
+					</div>
+					<span class="circular-charts__title">
+						Leadership
+					</span>
+				</div>
+				<div class="circular-charts__item">
+					<div class="progress-radial progress-80">
+						<div class="overlay"><span class="counter">80</span>%</div>
+					</div>
+					<span class="circular-charts__title">
+						Leadership
+					</span>
+				</div>
+				<div class="circular-charts__item">
+					<div class="progress-radial progress-80">
+						<div class="overlay"><span class="counter">80</span>%</div>
+					</div>
+					<span class="circular-charts__title">
+						Leadership
+					</span>
+				</div>
+				<div class="circular-charts__item">
+					<div class="progress-radial progress-80">
+						<div class="overlay"><span class="counter">80</span>%</div>
+					</div>
+					<span class="circular-charts__title">
+						Leadership
+					</span>
+				</div>
+				<div class="circular-charts__item">
+					<div class="progress-radial progress-80">
+						<div class="overlay"><span class="counter">80</span>%</div>
+					</div>
+					<span class="circular-charts__title">
+						Leadership
+					</span>
+				</div>
+			</div> -->
 		</div>
 	</section>
 	<section class="works-section section">
@@ -1228,39 +1255,165 @@
 	});
 </script>
 <script type="text/javascript">
-	if ( $('.latest_posts__item-2').css('display') == 'none' ) {
-		var blocknumber = 2;
-		$('.view-more_button').on('click', function() {
-		$('.latest_posts__item-' + blocknumber).addClass('js-display');
-		blocknumber += 1;
-	});
-	} else if ( $('.latest_posts__item-3').css('display') == 'none' ) {
-		var blocknumber = 3;
-		$('.view-more_button').on('click', function() {
-		$('.latest_posts__item-' + blocknumber).addClass('js-display');
-		blocknumber += 1;
-		$('.latest_posts__item-' + blocknumber).addClass('js-display');
-		blocknumber += 1;
-	});
-	} else if ($('.latest_posts__item-3').is(':visible')) {
-		var blocknumber = 4;
-		$('.view-more_button').on('click', function() {
-		$('.latest_posts__item-' + blocknumber).addClass('js-display');
-		blocknumber += 1;
-		$('.latest_posts__item-' + blocknumber).addClass('js-display');
-		blocknumber += 1;
-		$('.latest_posts__item-' + blocknumber).addClass('js-display');
-		blocknumber += 1;
-	});
+var blocknumber;
+$(window).on('resize', newsOnResize);
+newsOnResize();
+	// if ( $('.latest_posts__item-2').css('display') == 'none' ) {
+	// 	blocknumber = 2;
+	// 	$('.view-more_button').on('click', function() {
+	// 		$('.latest_posts__item-' + blocknumber).addClass('js-display');
+	// 		blocknumber += 1;
+	// 	});
+	// } else if ( $('.latest_posts__item-3').css('display') == 'none' ) {
+	// 	blocknumber = 3;
+	// 	$('.view-more_button').on('click', function() {
+	// 		$('.latest_posts__item-' + blocknumber).addClass('js-display');
+	// 		blocknumber += 1;
+	// 		$('.latest_posts__item-' + blocknumber).addClass('js-display');
+	// 		blocknumber += 1;
+	// 	});
+	// } else if ($('.latest_posts__item-3').is(':visible')) {
+	// 	blocknumber = 4;
+	// 	$('.view-more_button').on('click', function() {
+	// 		$('.latest_posts__item-' + blocknumber).addClass('js-display');
+	// 		blocknumber += 1;
+	// 		$('.latest_posts__item-' + blocknumber).addClass('js-display');
+	// 		blocknumber += 1;
+	// 		$('.latest_posts__item-' + blocknumber).addClass('js-display');
+	// 		blocknumber += 1;
+	// 	});
+	// }
+	function newsOnResize() {
+		if ( $('.latest_posts__item-2').css('display') == 'none' ) {
+			blocknumber = 2;
+			$('.view-more_button').on('click', function() {
+				$('.latest_posts__item-' + blocknumber).addClass('js-display');
+				blocknumber += 1;
+			});
+		} else if ( $('.latest_posts__item-3').css('display') == 'none' ) {
+			blocknumber = 3;
+			$('.view-more_button').on('click', function() {
+				$('.latest_posts__item-' + blocknumber).addClass('js-display');
+				blocknumber += 1;
+				$('.latest_posts__item-' + blocknumber).addClass('js-display');
+				blocknumber += 1;
+			});
+		} else if ($('.latest_posts__item-3').is(':visible')) {
+			blocknumber = 4;
+			$('.view-more_button').on('click', function() {
+				$('.latest_posts__item-' + blocknumber).addClass('js-display');
+				blocknumber += 1;
+				$('.latest_posts__item-' + blocknumber).addClass('js-display');
+				blocknumber += 1;
+				$('.latest_posts__item-' + blocknumber).addClass('js-display');
+				blocknumber += 1;
+			});
+		}
 	}
 </script>
 
+<script src="jquery.waypoints.min.js"></script>
 <script src="jquery.counterup.min.js"></script>
 <script type="text/javascript">
 	$('.counter').counterUp({
     delay: 10,
     time: 1000
 });
+</script>
+<script src="jquery.circliful.min.js"></script>
+<script>
+$( document ).ready(function() {
+        $("#test-circle-leadership").circliful({
+            animation: 1,
+            animationStep: 5,
+            foregroundBorderWidth: 6,
+            backgroundBorderWidth: 6,
+            percent: 60,
+            textSize: 28,
+            textStyle: 'font-size: 12px;',
+            textColor: '#666',
+            multiPercentage: 1,
+            percentages: [10, 20, 30],
+            foregroundColor: '#68c3a3',
+            backgroundColor: '#2f3439',
+            fontColor: '#fff'
+        });
+        $("#test-circle-charisma").circliful({
+            animation: 1,
+            animationStep: 5,
+            foregroundBorderWidth: 6,
+            backgroundBorderWidth: 6,
+            percent: 85,
+            textSize: 28,
+            textStyle: 'font-size: 12px;',
+            textColor: '#666',
+            multiPercentage: 1,
+            percentages: [10, 20, 30],
+            foregroundColor: '#68c3a3',
+            backgroundColor: '#2f3439',
+            fontColor: '#fff'
+        });
+        $("#test-circle-diligence").circliful({
+            animation: 1,
+            animationStep: 5,
+            foregroundBorderWidth: 6,
+            backgroundBorderWidth: 6,
+            percent: 95,
+            textSize: 28,
+            textStyle: 'font-size: 12px;',
+            textColor: '#666',
+            multiPercentage: 1,
+            percentages: [10, 20, 30],
+            foregroundColor: '#68c3a3',
+            backgroundColor: '#2f3439',
+            fontColor: '#fff'
+        });
+        $("#test-circle-cheerfulness").circliful({
+            animation: 1,
+            animationStep: 5,
+            foregroundBorderWidth: 6,
+            backgroundBorderWidth: 6,
+            percent: 60,
+            textSize: 28,
+            textStyle: 'font-size: 12px;',
+            textColor: '#666',
+            multiPercentage: 1,
+            percentages: [10, 20, 30],
+            foregroundColor: '#68c3a3',
+            backgroundColor: '#2f3439',
+            fontColor: '#fff'
+        });
+        $("#test-circle-creativity").circliful({
+            animation: 1,
+            animationStep: 5,
+            foregroundBorderWidth: 6,
+            backgroundBorderWidth: 6,
+            percent: 98,
+            textSize: 28,
+            textStyle: 'font-size: 12px;',
+            textColor: '#666',
+            multiPercentage: 1,
+            percentages: [10, 20, 30],
+            foregroundColor: '#68c3a3',
+            backgroundColor: '#2f3439',
+            fontColor: '#fff'
+        });
+        $("#test-circle-ironman").circliful({
+            animation: 1,
+            animationStep: 5,
+            foregroundBorderWidth: 6,
+            backgroundBorderWidth: 6,
+            percent: 100,
+            textSize: 28,
+            textStyle: 'font-size: 12px;',
+            textColor: '#666',
+            multiPercentage: 1,
+            percentages: [10, 20, 30],
+            foregroundColor: '#68c3a3',
+            backgroundColor: '#2f3439',
+            fontColor: '#fff'
+        });
+    });
 </script>
 
 </body>
