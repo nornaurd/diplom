@@ -1250,6 +1250,10 @@ h1 {
 
 /*CIRCULAR CHARTS CSS*/
 
+.new_string {
+	display: none;
+}
+
 .section__title3_dark {
 	font: 500 24px 'Roboto';
 	color: #fff;
@@ -1266,7 +1270,6 @@ h1 {
 	font: 300 16px 'Roboto';
 	color: #fff;
 	text-align: justify;
-	margin: 0 -30px;
 }
 
 .circular-charts:before{
@@ -1300,13 +1303,16 @@ h1 {
 .circular-charts-wrap {
 	display: inline-block;
 	text-align-last: center;
-	text-align:center;
+	text-align: center;
+	width: 16%;
+	margin: 0 -31px;
 }
 
-@media screen and (max-width: 1000px) {
-	.circular-charts-wrap {
-		width: 33%;
-	}
+@media screen and (max-width: 799px) {
+.circular-charts-wrap {
+	width: 33%;
+	margin: 0;
+}
 }
 
 /* .circular-charts {

@@ -1332,13 +1332,13 @@ newsOnResize();
     time: 1000
 });
 </script>
+<script src="jquery.circliful.min.js"></script>
+<script src="ScrollMagic.min.js"></script>
 <script>
     // init controller
     var controller = new ScrollMagic.Controller();
-</script>
-<script src="jquery.circliful.min.js"></script>
-<script>
-$( document ).ready(function() {
+	var scene = new ScrollMagic.Scene({triggerElement: ".circular-charts"})
+    .on("enser", function () {
         $("#test-circle-leadership").circliful({
             animation: 1,
             animationStep: 5,
@@ -1429,9 +1429,11 @@ $( document ).ready(function() {
             backgroundColor: '#2f3439',
             fontColor: '#fff'
         });
-    });
+    })
+    .addTo(controller);
 </script>
-<script src="ScrollMagic.min.js"></script>
+ 
+
 
 </body>
 </html>
