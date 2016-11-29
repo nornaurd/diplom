@@ -1318,6 +1318,25 @@ h1 {
 	}
 }
 
+@media screen and (max-width: 1000px) {
+	.circular-charts__item {
+		width: 115px;
+	}
+}
+
+@media screen and (max-width: 321px) {
+	.circular-charts-wrap {
+		width: 30%;
+	}
+	.circular-charts__item {
+		width: 100px;
+	}
+	.circle-label {
+		font: 300 12px 'Roboto';
+		color: #fff;
+	}
+}
+
 /* .circular-charts {
 	font: 300 16px 'Roboto';
 	color: #fff;
