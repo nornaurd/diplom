@@ -476,13 +476,16 @@ h1 {
 	}
 }
 
+/* main menu begin */
+
 .menu {
 	background-color: #fff;
-	border-bottom: 3px double #eee;
+	/*border-bottom: 3px double #eee;*/
 	z-index: 100;
 	height: 50px;
 	text-align: center;
 	width: 100%;
+	position: relative;
 }
 
 .menu__item {
@@ -507,22 +510,17 @@ h1 {
 }
 
 .menu__icon {
-	width: 100%;
 	padding: 0;
 }
 
-.menu_icon__bar-wrap {
-	display: inline-block;
-	width: 30px;
-	vertical-align: middle;
+.menu-buttons {
+	display: none;
+	/*border-bottom: 3px double #eee;	*/
 }
-
-/* .menu-icon__bar {
-	height: 2px;
-	border-radius: 1px;
-	background-color: #2c3e50;
-	margin-bottom: 5px;
-} */
+.menu-buttons div {
+	background-color: white;
+	cursor: pointer;
+}
 
 .section__title2_light {
 	font: 500 50px 'Roboto';
@@ -531,22 +529,52 @@ h1 {
 	text-align: center;
 }
 
-@media screen and (min-width: 600px) {
-	.menu__icon {
-		display: none;
-	}
+.menu-list {
+	background-color: #fff;
+	border-bottom: 3px double #eee;
+	height: 50px;
+}
+.menu-hidden {
+	display: block;
 }
 
-@media screen and (max-width: 600px) {
-	.menu__item:not(:last-child) {
-		display: none;
+@media screen and (max-width: 700px) {
+	.menu-buttons {
+		display: block;
+		/*border-bottom: 3px double #eee;		*/
+	}
+	.menu-buttons .menu__item {
+			border-bottom: 3px double #eee;
+	}
+	.menu-buttons .menu__item:hover {
+			border-bottom: 3px double #55ae8f;
 	}
 
-	.menu {
+	.menu__item {
+		display: block;
+		width: 100%;
+		border-bottom: 1px solid #eee;
 		padding: 0;
 	}
+	.menu__item:hover {
+		border-bottom: 1px solid #eee;
+	}
 
+	a.menu__item:last-child {
+		border-bottom: none;
+	}
+	.menu-list {
+		height: auto;
+		z-index: 10000;
+		position: absolute;
+		width: 100%;
+	}
+	.menu-hidden {
+		display: none;
+	}
 }
+
+/* main menu end */
 
 @media screen and (max-width: 600px) {
 	.section__title2_light {
@@ -1270,17 +1298,22 @@ h1 {
 	font: 300 16px 'Roboto';
 	color: #fff;
 	text-align: justify;
-	margin: 0 -31px;
+	overflow: hidden;
 }
 
-.circular-charts:before{
+.c-c-wrap {
+	margin: 0 -51px;
+	text-align: justify;
+}
+
+.c-c-wrap:before{
     content: '';
     display: block;
     width: 100%;
     height: 0;
 }
- 
-.circular-charts:after {
+
+.c-c-wrap:after {
     width: 100%;
     height: 0;
     visibility: hidden;
@@ -1295,6 +1328,7 @@ h1 {
 	text-align:center;
 	width: 150px;
 	box-sizing: border-box;
+	margin-bottom: 20px;
 }
 
 .circle-label {
@@ -1316,6 +1350,9 @@ h1 {
 	.circular-charts-wrap {
 		width: 30%;
 	}
+	.c-c-wrap {
+	margin: 0 0px;
+}
 }
 
 @media screen and (max-width: 1000px) {
@@ -1349,7 +1386,7 @@ h1 {
     width: 100%;
     height: 0;
 }
- 
+
 .circular-charts:after {
     width: 100%;
     height: 0;
@@ -1452,17 +1489,17 @@ h1 {
 	font: 400 14px 'Roboto';
 	text-transform: uppercase;
 	padding: 9px 16px;
-	margin: 0 5px;
+	margin: 0 5px 10px;
 	position: relative;
 	border-bottom: 3px solid rgba(255, 255, 255, 0.0);
 	cursor: pointer;
 }
 
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
 	.works-section-menu__item {
 		padding: 13px 5px;
 	}
-}
+} */
 
 .works-section-menu__item.is-active,
 .works-section-menu__item:hover {
@@ -1490,7 +1527,7 @@ h1 {
 
 .works_section_gallery {
 	font-size: 0;
-	margin: 0 -0.7%;
+	margin: 0;
 }
 
 .works-section-gallery__item {
@@ -1499,7 +1536,7 @@ h1 {
 }
 
 .works-section-gallery__item figure {
-	
+
 /* 	width: 23.6%; */
 	background-color: #fff;
 	padding: 3px;
@@ -1509,39 +1546,10 @@ h1 {
 
 }
 
-@media screen and (max-width: 800px) {
-	.works-section-gallery__item {
-/* 		width: 48%; */
-	}
-
-	.works-section-gallery__item:nth-child(5),
-	.works-section-gallery__item:nth-child(6),
-	.works-section-gallery__item:nth-child(7),
-	.works-section-gallery__item:nth-child(8) {
-		display: none;
-	}
-}
-
-@media screen and (max-width: 500px) {
-	.works-section-gallery__item {
-/* 		width: 100%; */
-	}
-
-	.works-section-gallery__item:nth-child(2),
-	.works-section-gallery__item:nth-child(3),
-	.works-section-gallery__item:nth-child(4) {
-		display: none;
-	}
-}
+/*  */
 
 .works-section-gallery__item img {
 	width: 100%;
-}
-
-@media screen and (min-width: 799px) {
-	.works-section-navigation {
-		display: none;
-	}
 }
 
 .experience-section {
@@ -1607,6 +1615,16 @@ h1 {
 	.experience__title {
 		font-size: 14px;
 	}
+}
+
+@media screen and (max-width: 321px) {
+	.experience__title {
+		font-size: 13px;
+	}
+	.experience__item {
+	width: 44%;
+	margin: 0 2%;
+}
 }
 
 .latest_posts_wrap {
@@ -2120,12 +2138,3 @@ h1 {
 		height: 300px;
 	}
 }
-
-
-
-
-
-
-
-
-
