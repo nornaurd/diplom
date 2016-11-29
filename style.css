@@ -773,6 +773,7 @@ h1 {
 
 	.skills-list-item__wrap {
 		width: 100%;
+		margin-bottom: 100px;
 	}
 
 	.skills-list-item__border {
@@ -787,11 +788,12 @@ h1 {
 	.skills-list-item__icon {
 	margin-top: 80%;
 	}
-
-	.skills-list-item__wrap:not(:first-child) {
-		display:none;
+	.skills-list-item__wrap:nth-child(2) .skills-list-item__icon {
+	margin-top: 50%;
 	}
-
+	.skills-list-item__wrap:nth-child(3) .skills-list-item__icon {
+	margin-top: 50%;
+	}
 }
 
 
